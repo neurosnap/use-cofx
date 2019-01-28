@@ -1,0 +1,20 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint-config-airbnb",
+        "tslint-no-circular-imports",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+      "max-line-length": [true, 80],
+      "object-shorthand-properties-first": false,
+      "function-name": false,
+      "import-name": false,
+      "ter-indent": [2, true],
+      "align": [false],
+      "variable-name": [false],
+      "ter-arrow-parens": [true, "always"],
+    },
+    "rulesDirectory": []
+}
