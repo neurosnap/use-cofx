@@ -66,6 +66,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-test-renderer@^16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"
+  integrity sha512-NWOAxVQeJxpXuNKgw83Hah0nquiw1nUexM9qY/Hk3a+XhZwgMtaa6GLA9E1TKMT75Odb3/KE/jiBO4enTuEJjQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.7.21":
   version "16.7.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.21.tgz#17e45871a2502e33b12b63279f44e1c02a4632fc"
@@ -3231,6 +3238,21 @@ react-dom@16.8.0-alpha.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+    scheduler "^0.13.0-alpha.1"
+
+react-is@^16.8.0-alpha.1:
+  version "16.8.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.0-alpha.1.tgz#ac1aed207d6040f002b645af36702edf9ce2c40d"
+  integrity sha512-Gsh2u4ovhS2DY6fWgie/av5vzrIfW6P0lgWAsAQp9DjOImE0fJ26FfEdpFXtYBwi5s2krT9z0xvcQKvQsi4ekw==
+
+react-test-renderer@16.8.0-alpha.1:
+  version "16.8.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.0-alpha.1.tgz#65f09023aeb83cbb1716f2364fed61c0017cd2ba"
+  integrity sha512-ayhWv47RYZuZ/vY/Asmf2qLgphHtwsq32Y7uNztyO4HcdFh6HrieDioYwbObfxl3+Uf3r4UezJ7uxqT5NndsHw==
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    react-is "^16.8.0-alpha.1"
     scheduler "^0.13.0-alpha.1"
 
 react@16.8.0-alpha.1:

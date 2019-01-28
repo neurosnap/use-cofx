@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { task, Fn, GenFn, Runtime } from 'cofx';
+import { task } from 'cofx';
 
 export type AsyncState<T> =
   | {
@@ -18,7 +18,7 @@ export type AsyncState<T> =
       value: T;
     };
 
-const useCofx = <T>(fn: () => Fn | GenFn<T> | Runtime<T>, ...args: any[]) => {
+const useCofx = <T>(fn: (...args: any[]) => any, ...args: any[]) => {
   const [state, set] = useState<AsyncState<T>>({
     loading: true,
   });
