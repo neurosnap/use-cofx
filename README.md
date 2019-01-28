@@ -1,4 +1,4 @@
-# hooks-cofx
+# hooks-cofx [![Build Status](https://travis-ci.org/neurosnap/hooks-cofx.svg?branch=master)](https://travis-ci.org/neurosnap/hooks-cofx)
 
 Use `cofx` with react hooks
 
