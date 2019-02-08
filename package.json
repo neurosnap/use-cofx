@@ -18,34 +18,42 @@
     "precommit": "lint-staged",
     "start": "ts-node index.ts"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,ts}": [
       "prettier --write",
       "git add"
     ]
   },
+  "resolutions": {
+    "@types/react": "^16.8.2"
+  },
   "dependencies": {
-    "cofx": "^2.0.0",
-    "react": "16.8.0-alpha.1"
+    "cofx": "^2.1.0",
+    "react": "16.8.1"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.2",
-    "@types/node": "^10.10.2",
-    "@types/react": "^16.7.21",
-    "@types/react-dom": "^16.0.11",
-    "@types/react-test-renderer": "^16.0.3",
-    "husky": "^0.14.3",
-    "jest": "^23.5.0",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7",
-    "react-dom": "16.8.0-alpha.1",
-    "react-test-renderer": "16.8.0-alpha.1",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.12.23",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "@types/react-test-renderer": "^16.8.0",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.1.3",
+    "prettier": "^1.16.4",
+    "react-dom": "16.8.1",
+    "react-test-renderer": "16.8.1",
     "ts-jest": "^23.10.1",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.0.2",
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "^5.8.0",
-    "tslint-config-prettier": "^1.13.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-no-circular-imports": "^0.6.1",
-    "typescript": "^3.2.4"
+    "typescript": "^3.3.3"
   }
 }

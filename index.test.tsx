@@ -1,4 +1,4 @@
-import { createElement as h } from 'react';
+import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import { delay } from 'cofx';
 
@@ -14,7 +14,7 @@ describe('useCofx', () => {
 
       const App = () => {
         const { value } = useCofx(fn);
-        return h('div', null, value);
+        return <div>{value}</div>;
       };
 
       const tree = TestRenderer.create(App());
