@@ -9,7 +9,7 @@
   "description": "Use cofx with react hooks",
   "repository": {
     "type": "git",
-    "url": "git://github.com/neurosnap/hooks-cofx.git"
+    "url": "git://github.com/neurosnap/use-cofx.git"
   },
   "scripts": {
     "build": "tsc",
