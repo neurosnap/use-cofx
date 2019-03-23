@@ -18,9 +18,9 @@ export type AsyncState<T> =
       value: T;
     };
 
-export default function useCofx<T>(
-  fn: (...args: any[]) => any,
-  ...args: any[]
+export default function useCofx<T, Fn extends (...args: any[]) => any>(
+  fn: Fn,
+  ...args: Parameters<Fn>
 ) {
   const [state, set] = useState<AsyncState<T>>({
     loading: true,

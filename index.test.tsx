@@ -17,7 +17,7 @@ describe('useCofx', () => {
         return <div>{value}</div>;
       };
 
-      const tree = TestRenderer.create(App());
+      const tree = TestRenderer.create(<App />);
       console.log(tree.toJSON());
     });
   });
