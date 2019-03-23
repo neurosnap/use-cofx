@@ -1,9 +1,9 @@
-# hooks-cofx [![Build Status](https://travis-ci.org/neurosnap/hooks-cofx.svg?branch=master)](https://travis-ci.org/neurosnap/hooks-cofx)
+# use-cofx [![Build Status](https://travis-ci.org/neurosnap/use-cofx.svg?branch=master)](https://travis-ci.org/neurosnap/use-cofx)
 
 Use `cofx` with react hooks
 
 ```js
-import useCofx from 'hooks-cofx';
+import useCofx from 'use-cofx';
 
 function* fetchMovies() {
   const resp = yield call(fetch, '/movies');
