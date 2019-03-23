@@ -1,24 +1,49 @@
+import 'jest-dom/extend-expect';
 import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
+import { render, cleanup, waitForElement } from 'react-testing-library';
 import { delay } from 'cofx';
 
 import useCofx from './index';
 
 describe('useCofx', () => {
   describe('when passing a generator', () => {
-    it('should return success text', () => {
+    afterEach(cleanup);
+
+    it('should return loading text', () => {
       function* fn() {
         yield delay(100);
         return 'success';
       }
 
       const App = () => {
-        const { value } = useCofx(fn);
+        const { loading, value } = useCofx(fn);
+        if (loading) {
+          return <div>loading</div>;
+        }
         return <div>{value}</div>;
       };
 
-      const tree = TestRenderer.create(<App />);
-      console.log(tree.toJSON());
+      const { getByText } = render(<App />);
+      expect(getByText('loading')).toBeInTheDocument();
+    });
+
+    it('should return success text', async () => {
+      function* fn() {
+        yield delay(100);
+        return 'success';
+      }
+
+      const App = () => {
+        const { loading, value } = useCofx(fn);
+        if (loading) {
+          return <div>loading</div>;
+        }
+        return <div>{value}</div>;
+      };
+
+      const { getByText } = render(<App />);
+      const node = await waitForElement(() => getByText('success'));
+      expect(node).toBeInTheDocument();
     });
   });
 });

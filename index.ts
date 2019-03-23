@@ -32,7 +32,6 @@ export default function useCofx<T, Fn extends (...args: any[]) => any>(
     set({
       loading: true,
     });
-    const promise = memoized();
 
     const onResolve = (value: T) => {
       if (!mounted) {
@@ -56,7 +55,7 @@ export default function useCofx<T, Fn extends (...args: any[]) => any>(
       });
     };
 
-    task(promise).then(onResolve, onReject);
+    task(memoized, ...args).then(onResolve, onReject);
 
     return () => {
       mounted = false;
